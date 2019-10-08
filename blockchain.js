@@ -1,5 +1,6 @@
 const Block = require('./block');
 const cryptoHash = require('./crypto-hash');
+
 class Blockchain {
 	constructor() {
 		this.chain = [Block.genesis()];
@@ -13,6 +14,21 @@ class Blockchain {
 
 		this.chain.push(newBlock);
 	}
+
+
+	replaceChain(chain) {
+		if(chain.length <= this.chain.length) {
+			console.error('The incoming chain must be longer');
+			return;
+		}
+		if(!Blockchain.isValidChain(chain)) {
+			console.error('The incoming chain must be longer');
+			return;
+		}
+		console.log('replacing chain with', chain);
+		this.chain = chain;
+	}
+
 
 	static isValidChain(chain) {
 		//checking the string values of the json objects
