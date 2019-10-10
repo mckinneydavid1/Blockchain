@@ -1,3 +1,4 @@
+const MINE_RATE = 1000;
 const INITIAL_DIFFICULTY = 3;
 
 //since we have an initial difficulty for genesis block,
@@ -13,4 +14,4 @@ const GENESIS_DATA = {
 };
 
 //let other files have access to this object
-module.exports = {GENESIS_DATA};
+module.exports = {GENESIS_DATA, MINE_RATE};
