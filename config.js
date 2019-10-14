@@ -13,5 +13,9 @@ const GENESIS_DATA = {
 	data: []
 };
 
+//starting balance for a wallet
+const STARTING_BALANCE = 1000;
+
+
 //let other files have access to this object
-module.exports = {GENESIS_DATA, MINE_RATE};
+module.exports = {GENESIS_DATA, MINE_RATE, STARTING_BALANCE};

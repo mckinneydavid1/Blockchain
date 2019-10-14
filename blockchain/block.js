@@ -1,8 +1,8 @@
 /* This file contains implementation for a block and for mining a block
 */
 const hexToBinary = require('hex-to-binary');
-const {GENESIS_DATA, MINE_RATE} = require('./config');
-const cryptoHash = require('./crypto-hash');
+const {GENESIS_DATA, MINE_RATE} = require('../config');
+const cryptoHash = require('../util/crypto-hash');
 
 
 // create a Class to represent a single block
